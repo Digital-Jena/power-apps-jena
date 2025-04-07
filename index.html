@@ -2,65 +2,108 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Power Apps Entwicklung Jena | Low-Code Lösungen</title>
-  <meta name="description" content="Individuelle Microsoft Power Apps für Unternehmen in Jena und Umgebung. Digitalisierung einfach gemacht mit Low-Code.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Power Apps Entwicklung Jena</title>
+  <meta name="description" content="Power Apps Entwicklung in Jena für Unternehmen. Individuelle Microsoft Business-Lösungen mit Low-Code.">
   <style>
     body {
-      font-family: sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
     }
-    h1, h2 {
-      color: #2e2e2e;
-    }
-    a.button {
-      display: inline-block;
+
+    header {
       background: #0078D4;
       color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-top: 1rem;
+      padding: 2rem;
+      text-align: center;
     }
+
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #0078D4;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
     form {
       margin-top: 2rem;
     }
+
     input, textarea {
       width: 100%;
       padding: 10px;
-      margin: 0.5rem 0;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
+
     input[type="submit"] {
       background: #0078D4;
       color: white;
       border: none;
       cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #005ea8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
+<header>
   <h1>Power Apps Entwicklung in Jena</h1>
-  <p>Ich entwickle individuelle Microsoft Power Apps für Unternehmen in Jena und Umgebung. Mit Low-Code digitalisieren wir Ihre Prozesse schnell und effizient.</p>
+  <p>Low-Code Lösungen für Unternehmen</p>
+</header>
 
-  <h2>Ihre Vorteile</h2>
+<main>
+  <h2>Was ich anbiete</h2>
+  <p>Ich helfe Unternehmen in Jena und Umgebung bei der Digitalisierung ihrer Prozesse mit Microsoft Power Apps.</p>
   <ul>
-    <li>Automatisierung manueller Prozesse</li>
-    <li>Integration in Microsoft 365 & Teams</li>
-    <li>Kostengünstige App-Entwicklung</li>
-    <li>Schnelle Umsetzung</li>
+    <li>Automatisierung interner Abläufe</li>
+    <li>Integration mit Microsoft 365 & Teams</li>
+    <li>Schnelle Entwicklung ohne hohe Kosten</li>
+    <li>Modernes App-Design für Desktop & Mobil</li>
   </ul>
 
-  <h2>Jetzt unverbindlich anfragen</h2>
+  <h2>Kontakt aufnehmen</h2>
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="text" name="name" placeholder="Ihr Name" required>
-    <input type="email" name="email" placeholder="Ihre E-Mail" required>
-    <textarea name="message" placeholder="Ihre Nachricht" rows="4" required></textarea>
-    <input type="submit" value="Absenden">
+    <label for="name">Name</label>
+    <input type="text" name="name" required>
+
+    <label for="email">E-Mail</label>
+    <input type="email" name="email" required>
+
+    <label for="message">Nachricht</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <input type="submit" value="Nachricht senden">
   </form>
+</main>
+
+<footer>
+  &copy; 2025 Power Apps Jena | Erstellt mit Liebe in Thüringen
+</footer>
 
 </body>
 </html>
