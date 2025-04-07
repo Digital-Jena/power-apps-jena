@@ -29,11 +29,11 @@
     }
 
     h1 {
-      color:  #FFFFFF;
+      color: #FFFFFF;
     }
 
     h2 {
-      color:#0078D4;
+      color: #0078D4;
     }
 
     ul {
@@ -55,6 +55,42 @@
       background: #005ea8;
     }
 
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    button[type="submit"] {
+      margin-top: 1.5rem;
+      background: #0078D4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background: #005ea8;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -73,9 +109,11 @@
 <main>
   <h2>Effiziente Digitalisierung mit Microsoft Power Apps</h2>
   <p>Ich unterstütze Unternehmen in Jena und Thüringen dabei, ihre internen Prozesse mit Microsoft Power Apps zu automatisieren – schnell, effizient und ohne teure Softwareprojekte.</p>
+
   <h2>Jetzt unverbindliches Erstgespräch buchen</h2>
   <p>Ich zeige Ihnen in 30 Minuten, wie Ihre erste Power App aussehen könnte.</p>
   <a href="https://calendly.com/julius-bruch/30min" class="button" target="_blank">Jetzt Termin vereinbaren</a>
+
   <h2>Typische Herausforderungen</h2>
   <p>Viele Unternehmen kämpfen mit:</p>
   <ul>
@@ -101,22 +139,19 @@
     <li><strong>Technisch sauber:</strong> Integration in Microsoft 365, Teams, SharePoint</li>
     <li><strong>Praxisorientiert:</strong> Fokus auf echte Probleme, keine Spielereien</li>
   </ul>
-<h2>Kontakt aufnehmen</h2>
-  <form
-  action="https://formspree.io/f/xeoapzvl"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+
+  <h2>Kontakt aufnehmen</h2>
+  <p>Sie haben Fragen oder möchten direkt eine Idee besprechen? Schreiben Sie mir gern eine Nachricht.</p>
+
+  <form action="https://formspree.io/f/xeoapzvl" method="POST">
+    <label for="email">Ihre E-Mail-Adresse</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="message">Ihre Nachricht</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
+
+    <button type="submit">Nachricht senden</button>
+  </form>
 </main>
 
 <footer>
