@@ -171,11 +171,11 @@
     <li><strong>Technisch sauber:</strong> Integration in Microsoft 365, Teams, SharePoint</li>
     <li><strong>Praxisorientiert:</strong> Fokus auf echte Probleme, keine Spielereien</li>
   </ul>
+ <h2>Kontakt aufnehmen</h2>
+<p>Sie haben Fragen oder möchten direkt eine Idee besprechen? Schreiben Sie mir gern eine Nachricht.</p>
 
-  <h2>Kontakt aufnehmen</h2>
-  <p>Sie haben Fragen oder möchten direkt eine Idee besprechen? Schreiben Sie mir gern eine Nachricht.</p>
-    <form action="https://formspree.io/f/xeoapzvl" method="POST">
-  <input type="hidden" name="_redirect" value="https://power-apps-jena.de/danke.html">
+<div id="form-wrapper">
+  <form id="kontaktformular">
     <label for="email">Ihre E-Mail-Adresse</label>
     <input type="email" name="email" id="email" required>
 
@@ -184,6 +184,36 @@
 
     <button type="submit">Nachricht senden</button>
   </form>
+</div>
+
+<div id="danke-nachricht" style="display: none; margin-top: 2rem; padding: 1.5rem; background: #e6f7ff; border-left: 4px solid #0078D4; border-radius: 6px;">
+  <h3 style="margin-top: 0;">Vielen Dank!</h3>
+  <p>Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich so schnell wie möglich.</p>
+</div>
+
+<script>
+  const form = document.getElementById('kontaktformular');
+  const dankeBox = document.getElementById('danke-nachricht');
+  const formWrapper = document.getElementById('form-wrapper');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const response = await fetch('https://formspree.io/f/xeoapzvl', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    });
+
+    if (response.ok) {
+      formWrapper.style.display = 'none';
+      dankeBox.style.display = 'block';
+    } else {
+      alert("Es gab ein Problem beim Senden. Bitte versuchen Sie es später noch einmal.");
+    }
+  });
+</script>
 </main>
 
 <footer>
