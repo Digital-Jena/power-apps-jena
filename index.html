@@ -26,6 +26,101 @@
   <link rel="me" href="https://www.linkedin.com/in/julius-bruch-054296294/">
   <!-- CSS kommt darunter -->
   <style>
+/* General Enhancements */
+body {
+  font-family: 'Inter', sans-serif;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+a.button, button[type="submit"] {
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+a.button:hover, button[type="submit"]:hover {
+  transform: scale(1.03);
+}
+
+input, textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0078D4;
+  box-shadow: 0 0 8px rgba(0, 120, 212, 0.3);
+}
+
+/* Highlight sections */
+section.highlight {
+  background: #eef4fb;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+/* Dark Mode Contrast */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f0f0f;
+    color: #ffffff;
+  }
+
+  main {
+    background: #1a1a1a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border: 1px solid #333;
+  }
+
+  header {
+    background: #003366;
+    color: #ffffff;
+  }
+
+  h1, h2 {
+    color: #66ccff;
+  }
+
+  input, textarea {
+    background: #1c1c1c;
+    color: #ffffff;
+    border: 1px solid #444;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #888;
+  }
+
+  footer {
+    color: #cccccc;
+  }
+
+  a.button, button[type="submit"] {
+    background: #2299ff;
+    color: black;
+  }
+
+  a.button:hover, button[type="submit"]:hover {
+    background: #33ccff;
+  }
+
+  a {
+    color: #66ccff;
+  }
+
+  a:hover {
+    color: #ffffff;
+  }
+}
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
