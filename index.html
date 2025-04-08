@@ -97,6 +97,39 @@
       font-size: 0.9rem;
       color: #666;
     }
+    @media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+
+  main {
+    background: #2a2a2a;
+    box-shadow: none;
+  }
+
+  header {
+    background: #005ea8;
+  }
+
+  input, textarea {
+    background: #333;
+    color: #f0f0f0;
+    border-color: #555;
+  }
+
+  footer {
+    color: #aaa;
+  }
+
+  a.button, button[type="submit"] {
+    background: #3399ff;
+  }
+
+  a.button:hover, button[type="submit"]:hover {
+    background: #0078D4;
+  }
+}
   </style>
 </head>
 <body>
@@ -127,7 +160,6 @@
   <ul>
     <li>Mittelständische Unternehmen (KMU)</li>
     <li>Produktionsbetriebe, Dienstleister, Agenturen</li>
-    <li>IT-Teams ohne eigene Entwickler</li>
     <li>Organisationen mit Microsoft 365</li>
   </ul>
 
@@ -142,8 +174,8 @@
 
   <h2>Kontakt aufnehmen</h2>
   <p>Sie haben Fragen oder möchten direkt eine Idee besprechen? Schreiben Sie mir gern eine Nachricht.</p>
-
-  <form action="https://formspree.io/f/xeoapzvl" method="POST">
+    <form action="https://formspree.io/f/xeoapzvl" method="POST">
+  <input type="hidden" name="_redirect" value="https://power-apps-jena.de/danke.html">
     <label for="email">Ihre E-Mail-Adresse</label>
     <input type="email" name="email" id="email" required>
 
