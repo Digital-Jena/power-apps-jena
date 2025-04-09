@@ -265,6 +265,30 @@ section.highlight {
     color: #ffffff;
   }
 }
+  .site-footer {
+  background: #f4f6f9;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-footer {
+    background: #121212;
+    color: #ccc;
+    border-top: 1px solid #333;
+  }
+
+  .site-footer a {
+    color: #66ccff;
+  }
+
+  .site-footer a:hover {
+    color: #ffffff;
+  }
+}
   </style>
 </head>
 <body>
@@ -351,8 +375,7 @@ section.highlight {
 </script>
 </main>
 
-<footer style="background: #f4f6f9; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #666; border-top: 1px solid #ddd;">
-
+<footer class="site-footer">
   <p style="margin-bottom: 1rem;">&copy; 2025 Power Apps Jena · Erstellt in Thüringen</p>
 
   <a href="https://www.linkedin.com/in/julius-bruch-054296294/" 
