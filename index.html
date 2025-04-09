@@ -265,53 +265,6 @@ section.highlight {
     color: #ffffff;
   }
 }
-  .site-footer {
-  background: #f4f6f9;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  border-top: 1px solid #ddd;
-}
-
-@media (prefers-color-scheme: dark) {
-  .site-footer {
-    background: #121212;
-    color: #ccc;
-    border-top: 1px solid #333;
-  }
-
-  .site-footer a {
-    color: #66ccff;
-  }
-
-  .site-footer a:hover {
-    color: #ffffff;
-  }
-}
-    body.light-mode {
-  background: #f4f6f9;
-  color: #333;
-}
-
-body.dark-mode {
-  background: #1a1a1a;
-  color: #f0f0f0;
-}
-
-body.dark-mode header {
-  background: #005ea8;
-}
-
-body.dark-mode .site-footer {
-  background: #121212;
-  color: #ccc;
-  border-top: 1px solid #333;
-}
-
-body.dark-mode .site-footer a {
-  color: #66ccff;
-}
   </style>
 </head>
 <body>
@@ -320,15 +273,6 @@ body.dark-mode .site-footer a {
   <h1>Power Apps Entwicklung in Jena</h1>
   <p>Digitale Geschäftsprozesse für Ihr Unternehmen</p>
 </header>
-<button id="toggle-dark-mode" style="
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-">🌙</button>
 <main>
   <h2>Effiziente Digitalisierung mit Microsoft Power Apps</h2>
   <p>Ich unterstütze Unternehmen in Jena und Thüringen dabei, ihre internen Prozesse mit Microsoft Power Apps zu automatisieren – schnell, effizient und ohne teure Softwareprojekte.</p>
@@ -428,26 +372,5 @@ body.dark-mode .site-footer a {
        style="margin: 0 10px; color: #666; text-decoration: none;">Datenschutz</a>
   </div>
 </footer>
-<script>
-  const toggle = document.getElementById('toggle-dark-mode');
-  const body = document.body;
-
-  // Set default mode (optional: load from localStorage)
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    toggle.textContent = '🌞';
-  } else {
-    body.classList.add('light-mode');
-    toggle.textContent = '🌙';
-  }
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
-    const isDark = body.classList.contains('dark-mode');
-    toggle.textContent = isDark ? '🌞' : '🌙';
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
-</script>
 </body>
 </html>
