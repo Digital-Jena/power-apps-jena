@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Power Apps Entwicklung Jena</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background: #F9FAFC;
-      color: #555;
+      background: #ffffff;
+      color: #111827;
       margin: 0;
       line-height: 1.6;
     }
+
     h1, h2, h3 {
       font-family: 'Poppins', sans-serif;
-      color: #1F3C88;
+      color: #1D4ED8;
       margin-top: 0;
     }
 
     .site-header {
-      background: linear-gradient(to right, #1F3C88, #3AB0FF);
+      background: linear-gradient(to right, #1D4ED8, #FACC15);
       color: white;
       padding: 4rem 2rem;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
+
     .hero-text h1 {
       font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
+
     .hero-text p {
       font-size: 1.2rem;
-      color: #f0f8ff;
+      color: #fefce8;
     }
 
     main {
@@ -45,7 +48,7 @@
       margin: 2rem auto;
       padding: 2rem;
       background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
       border-radius: 10px;
     }
 
@@ -53,16 +56,18 @@
       list-style: none;
       padding-left: 0;
     }
+
     ul.icon-list li {
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
     }
+
     ul.icon-list .icon {
       width: 20px;
       height: 20px;
       margin-right: 10px;
-      fill: #FF6B6B;
+      fill: #FACC15;
     }
 
     .cards {
@@ -71,21 +76,23 @@
       gap: 1.5rem;
       margin: 2rem 0;
     }
+
     .card {
       background: #ffffff;
-      border-left: 5px solid #3AB0FF;
+      border-left: 5px solid #1D4ED8;
       border-radius: 8px;
       padding: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
       transition: transform 0.2s ease;
     }
+
     .card:hover {
       transform: translateY(-4px);
     }
 
     a.button, button[type="submit"] {
-      background: linear-gradient(135deg, #FF6B6B, #FF8E53);
-      color: white;
+      background: #FACC15;
+      color: #111827;
       font-weight: bold;
       border: none;
       border-radius: 8px;
@@ -96,19 +103,22 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       margin-top: 1rem;
     }
+
     a.button:hover, button[type="submit"]:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     form {
       margin-top: 2rem;
     }
+
     label {
       margin-top: 1rem;
       font-weight: 500;
       display: block;
     }
+
     input[type="email"], textarea {
       width: 100%;
       padding: 14px;
@@ -118,9 +128,10 @@
       margin-top: 0.5rem;
       transition: box-shadow 0.2s ease;
     }
+
     input:focus, textarea:focus {
-      border-color: #3AB0FF;
-      box-shadow: 0 0 8px rgba(58, 176, 255, 0.4);
+      border-color: #1D4ED8;
+      box-shadow: 0 0 8px rgba(29, 78, 216, 0.4);
       outline: none;
     }
 
@@ -130,17 +141,21 @@
       gap: 1rem;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #111827;
       align-items: center;
       text-align: center;
+      background: #f9fafb;
     }
+
     .footer-grid a {
-      color: #1F3C88;
+      color: #1D4ED8;
       text-decoration: none;
     }
+
     .footer-grid a:hover {
-      color: #3AB0FF;
+      color: #FACC15;
     }
+
     .footer-grid .social a {
       margin: 0 8px;
     }
@@ -149,10 +164,12 @@
       .hero-text h1 {
         font-size: 2rem;
       }
+
       main {
         margin: 1rem;
         padding: 1.5rem;
       }
+
       .footer-grid {
         grid-template-columns: 1fr;
         row-gap: 1rem;
@@ -160,73 +177,72 @@
     }
   </style>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="hero-text">
+      <h1>Power Apps Entwicklung in Jena</h1>
+      <p>Digitale Geschäftsprozesse für Ihr Unternehmen</p>
+    </div>
+  </header>
 
-<header class="site-header">
-  <div class="hero-text">
-    <h1>Power Apps Entwicklung in Jena</h1>
-    <p>Digitale Geschäftsprozesse für Ihr Unternehmen</p>
-  </div>
-</header>
+  <main>
+    <h2>Effiziente Digitalisierung mit Microsoft Power Apps</h2>
+    <p>Ich unterstütze Unternehmen in Jena und Thüringen dabei, ihre internen Prozesse mit Microsoft Power Apps zu automatisieren – schnell, effizient und ohne teure Softwareprojekte.</p>
 
-<main>
-  <h2>Effiziente Digitalisierung mit Microsoft Power Apps</h2>
-  <p>Ich unterstütze Unternehmen in Jena und Thüringen dabei, ihre internen Prozesse mit Microsoft Power Apps zu automatisieren – schnell, effizient und ohne teure Softwareprojekte.</p>
+    <h2>Typische Herausforderungen</h2>
+    <ul class="icon-list">
+      <li>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        langsamen, manuellen Abläufen
+      </li>
+      <li>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        Excel-Chaos
+      </li>
+      <li>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        fehlender Integration zwischen Tools
+      </li>
+    </ul>
 
-  <h2>Typische Herausforderungen</h2>
-  <ul class="icon-list">
-    <li>
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-      </svg>
-      langsamen, manuellen Abläufen
-    </li>
-    <li>
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-      </svg>
-      Excel-Chaos
-    </li>
-    <li>
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-      </svg>
-      fehlender Integration zwischen Tools
-    </li>
-  </ul>
+    <h2>Für wen ist das gedacht?</h2>
+    <ul>
+      <li>Mittelständische Unternehmen (KMU)</li>
+      <li>Produktionsbetriebe, Dienstleister, Agenturen</li>
+      <li>Organisationen mit Microsoft 365</li>
+    </ul>
 
-  <h2>Für wen ist das gedacht?</h2>
-  <ul>
-    <li>Mittelständische Unternehmen (KMU)</li>
-    <li>Produktionsbetriebe, Dienstleister, Agenturen</li>
-    <li>Organisationen mit Microsoft 365</li>
-  </ul>
+    <h2>Warum mit mir?</h2>
+    <section class="cards">
+      <div class="card"><h3>Lokal & persönlich</h3><p>Ansprechpartner direkt aus Jena</p></div>
+      <div class="card"><h3>Schnell & flexibel</h3><p>Erste App oft in wenigen Tagen</p></div>
+      <div class="card"><h3>Kostenbewusst</h3><p>Low-Code spart Entwicklungszeit</p></div>
+      <div class="card"><h3>Technisch sauber</h3><p>Integration in Microsoft 365, Teams, SharePoint</p></div>
+      <div class="card"><h3>Praxisorientiert</h3><p>Fokus auf echte Probleme, keine Spielereien</p></div>
+    </section>
 
-  <h2>Warum mit mir?</h2>
-  <section class="cards">
-    <div class="card"><h3>Lokal & persönlich</h3><p>Ansprechpartner direkt aus Jena</p></div>
-    <div class="card"><h3>Schnell & flexibel</h3><p>Erste App oft in wenigen Tagen</p></div>
-    <div class="card"><h3>Kostenbewusst</h3><p>Low-Code spart Entwicklungszeit</p></div>
-    <div class="card"><h3>Technisch sauber</h3><p>Integration in Microsoft 365, Teams, SharePoint</p></div>
-    <div class="card"><h3>Praxisorientiert</h3><p>Fokus auf echte Probleme, keine Spielereien</p></div>
-  </section>
+    <h2>Kontakt aufnehmen</h2>
+    <p>Sie haben Fragen oder möchten direkt eine Idee besprechen? Schreiben Sie mir gern eine Nachricht.</p>
+    <a class="button" href="mailto:julius@digitaliena.com">E-Mail an Julius senden</a>
+  </main>
 
-  <h2>Kontakt aufnehmen</h2>
-  <p>Sie haben Fragen oder möchten direkt eine Idee besprechen? Schreiben Sie mir gern eine Nachricht.</p>
-  <a class="button" href="mailto:julius@digitaliena.com">E-Mail an Julius senden</a>
-</main>
-
-<footer class="footer-grid">
-  <div>&copy; 2025 Power Apps Jena · Erstellt in Thüringen</div>
-  <div class="social">
-    <a href="https://www.linkedin.com/in/julius-bruch-054296294/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="20" alt="LinkedIn">
-    </a>
-  </div>
-  <div>
-    <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a>
-  </div>
-</footer>
-
+  <footer class="footer-grid">
+    <div>&copy; 2025 Power Apps Jena · Erstellt in Thüringen</div>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/julius-bruch-054296294/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="20" alt="LinkedIn" />
+      </a>
+    </div>
+    <div>
+      <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
 </body>
 </html>
