@@ -3,333 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Power Apps Entwicklung Jena</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Power Apps Entwicklung für Unternehmen in Jena und Thüringen. Individuelle Microsoft-Lösungen mit Low-Code.">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Open Graph für Facebook, LinkedIn, WhatsApp -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Power Apps Entwickler Jena – Effiziente Business-Lösungen">
-  <meta property="og:description" content="Ich entwickle individuelle Microsoft Power Apps für Unternehmen in Jena und Umgebung.">
-  <meta property="og:image" content="https://power-apps-jena.de/og-preview.png">
-  <meta property="og:url" content="https://power-apps-jena.de">
-
-  <!-- Favicon (optional) -->
-  <link rel="icon" href="favicon.png" type="image/png">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Linked in Header -->
-  <link rel="me" href="https://www.linkedin.com/in/julius-bruch-054296294/">
-  <!-- CSS kommt darunter -->
+  <!-- Styles -->
   <style>
-/* General Enhancements */
-body {
-  font-family: 'Inter', sans-serif;
-  animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-a.button, button[type="submit"] {
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-a.button:hover, button[type="submit"]:hover {
-  transform: scale(1.03);
-}
-
-input, textarea {
-  padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-  transition: box-shadow 0.2s ease;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #0078D4;
-  box-shadow: 0 0 8px rgba(0, 120, 212, 0.3);
-}
-
-/* Highlight sections */
-section.highlight {
-  background: #eef4fb;
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin: 2rem 0;
-}
-
-/* Dark Mode Contrast */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #0f0f0f;
-    color: #ffffff;
-  }
-
-  main {
-    background: #1a1a1a;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    border: 1px solid #333;
-  }
-
-  header {
-    background: #003366;
-    color: #ffffff;
-  }
-
-  h1, h2 {
-    color: #66ccff;
-  }
-
-  input, textarea {
-    background: #1c1c1c;
-    color: #ffffff;
-    border: 1px solid #444;
-  }
-
-  input::placeholder, textarea::placeholder {
-    color: #888;
-  }
-
-  footer {
-    color: #cccccc;
-  }
-
-  a.button, button[type="submit"] {
-    background: #2299ff;
-    color: black;
-  }
-
-  a.button:hover, button[type="submit"]:hover {
-    background: #33ccff;
-  }
-
-  a {
-    color: #66ccff;
-  }
-
-  a:hover {
-    color: #ffffff;
-  }
-}
-
     body {
+      font-family: 'Roboto', sans-serif;
+      background: #F9FAFC;
+      color: #555;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      color: #1F3C88;
+      margin-top: 0;
     }
 
-    header {
-      background: #0078D4;
+    .site-header {
+      background: linear-gradient(to right, #1F3C88, #3AB0FF);
       color: white;
-      padding: 2rem;
+      padding: 4rem 2rem;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .hero-text h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #f0f8ff;
     }
 
     main {
-      max-width: 750px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 2rem;
       background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-radius: 10px;
     }
 
-    h1 {
-      color: #FFFFFF;
+    ul.icon-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.icon-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    ul.icon-list .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      fill: #FF6B6B;
     }
 
-    h2 {
-      color: #0078D4;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .card {
+      background: #ffffff;
+      border-left: 5px solid #3AB0FF;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
     }
 
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      background: #0078D4;
+    a.button, button[type="submit"] {
+      background: linear-gradient(135deg, #FF6B6B, #FF8E53);
       color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
       padding: 12px 24px;
+      cursor: pointer;
       text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.3s;
+      display: inline-block;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 1rem;
     }
-
-    a.button:hover {
-      background: #005ea8;
+    a.button:hover, button[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
 
     form {
       margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
     }
-
     label {
       margin-top: 1rem;
-      font-weight: bold;
+      font-weight: 500;
+      display: block;
     }
-
-    input[type="email"],
-    textarea {
-      padding: 10px;
+    input[type="email"], textarea {
+      width: 100%;
+      padding: 14px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
       font-size: 1rem;
-      margin-top: 5px;
+      margin-top: 0.5rem;
+      transition: box-shadow 0.2s ease;
+    }
+    input:focus, textarea:focus {
+      border-color: #3AB0FF;
+      box-shadow: 0 0 8px rgba(58, 176, 255, 0.4);
+      outline: none;
     }
 
-    button[type="submit"] {
-      margin-top: 1.5rem;
-      background: #0078D4;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button[type="submit"]:hover {
-      background: #005ea8;
-    }
-
-    footer {
-      text-align: center;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1rem;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #666;
+      align-items: center;
+      text-align: center;
     }
-    @media (prefers-color-scheme: dark) {
-  body {
-    background: #0f0f0f;
-    color: #ffffff;
-  }
+    .footer-grid a {
+      color: #1F3C88;
+      text-decoration: none;
+    }
+    .footer-grid a:hover {
+      color: #3AB0FF;
+    }
+    .footer-grid .social a {
+      margin: 0 8px;
+    }
 
-  main {
-    background: #1a1a1a;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    border: 1px solid #333;
-  }
-
-  header {
-    background: #003366;
-    color: #ffffff;
-  }
-
-  h1, h2 {
-    color: #66ccff;
-  }
-
-  input, textarea {
-    background: #121212;
-    color: #ffffff;
-    border: 1px solid #555;
-  }
-
-  input::placeholder, textarea::placeholder {
-    color: #888;
-  }
-
-  footer {
-    color: #cccccc;
-  }
-
-  a.button, button[type="submit"] {
-    background: #66ccff;
-    color: #000;
-    font-weight: bold;
-  }
-
-  a.button:hover, button[type="submit"]:hover {
-    background: #00aaff;
-  }
-
-  a {
-    color: #66ccff;
-  }
-
-  a:hover {
-    color: #ffffff;
-  }
-}
-    .site-header {
-  background: #0078D4;
-  color: white;
-  padding: 2rem 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.header-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-.hero-text {
-  text-align: center;
-  margin-top: 2.5rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-text h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: white;
-}
-
-.hero-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #e3e3e3;
-}
-    .about-me {
-  background: #fff;
-  color: #333;
-  padding: 3rem 1rem;
-}
-
-.about-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.about-image {
-  width: 140px;
-  border-radius: 50%;
-  border: 3px solid #0078D4;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.about-text {
-  max-width: 500px;
-}
-
-.about-text h2 {
-  color: #0078D4;
-  margin-bottom: 1rem;
-}
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -340,17 +168,32 @@ section.highlight {
     <p>Digitale Geschäftsprozesse für Ihr Unternehmen</p>
   </div>
 </header>
+
 <main>
   <h2>Effiziente Digitalisierung mit Microsoft Power Apps</h2>
-  <p>Ich unterstütze Unternehmen in Jena und Thüringen dabei, ihre internen Prozesse mit Microsoft Power Apps zu automatisieren – schnell, effizient und ohne teure Softwareprojekte.</
+  <p>Ich unterstütze Unternehmen in Jena und Thüringen dabei, ihre internen Prozesse mit Microsoft Power Apps zu automatisieren – schnell, effizient und ohne teure Softwareprojekte.</p>
+
   <h2>Typische Herausforderungen</h2>
-  <p>Viele Unternehmen kämpfen mit:</p>
-  <ul>
-    <li>langsamen, manuellen Abläufen</li>
-    <li>Excel-Chaos</li>
-    <li>fehlender Integration zwischen Tools</li>
+  <ul class="icon-list">
+    <li>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      langsamen, manuellen Abläufen
+    </li>
+    <li>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      Excel-Chaos
+    </li>
+    <li>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+      </svg>
+      fehlender Integration zwischen Tools
+    </li>
   </ul>
-  <p>Das bremst Produktivität und kostet Zeit.</p>
 
   <h2>Für wen ist das gedacht?</h2>
   <ul>
@@ -360,39 +203,30 @@ section.highlight {
   </ul>
 
   <h2>Warum mit mir?</h2>
-  <ul>
-    <li><strong>Lokal & persönlich:</strong> Ansprechpartner direkt aus Jena</li>
-    <li><strong>Schnell & flexibel:</strong> Erste App oft in wenigen Tagen</li>
-    <li><strong>Kostenbewusst:</strong> Low-Code spart Entwicklungszeit</li>
-    <li><strong>Technisch sauber:</strong> Integration in Microsoft 365, Teams, SharePoint</li>
-    <li><strong>Praxisorientiert:</strong> Fokus auf echte Probleme, keine Spielereien</li>
-  </ul>
+  <section class="cards">
+    <div class="card"><h3>Lokal & persönlich</h3><p>Ansprechpartner direkt aus Jena</p></div>
+    <div class="card"><h3>Schnell & flexibel</h3><p>Erste App oft in wenigen Tagen</p></div>
+    <div class="card"><h3>Kostenbewusst</h3><p>Low-Code spart Entwicklungszeit</p></div>
+    <div class="card"><h3>Technisch sauber</h3><p>Integration in Microsoft 365, Teams, SharePoint</p></div>
+    <div class="card"><h3>Praxisorientiert</h3><p>Fokus auf echte Probleme, keine Spielereien</p></div>
+  </section>
+
   <h2>Kontakt aufnehmen</h2>
-<p>Sie haben Fragen oder möchten direkt eine Idee besprechen? Schreiben Sie mir gern eine Nachricht.</p>
-<a href="mailto:julius@digitaliena.com">E-Mail an Julius senden</a>
+  <p>Sie haben Fragen oder möchten direkt eine Idee besprechen? Schreiben Sie mir gern eine Nachricht.</p>
+  <a class="button" href="mailto:julius@digitaliena.com">E-Mail an Julius senden</a>
 </main>
 
-<footer class="site-footer">
-  <p style="margin-bottom: 1rem;">&copy; 2025 Power Apps Jena · Erstellt in Thüringen</p>
-
-  <a href="https://www.linkedin.com/in/julius-bruch-054296294/" 
-     target="_blank" 
-     style="display: inline-flex; align-items: center; gap: 8px; color: #0078D4; text-decoration: none; font-weight: 500; margin-bottom: 1rem;">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
-         alt="LinkedIn Icon" 
-         width="20" 
-         height="20"
-         style="vertical-align: middle;">
-    LinkedIn-Profil ansehen
-  </a>
-
-  <div style="margin-top: 1rem;">
-    <a href="/impressum.html" 
-       style="margin: 0 10px; color: #666; text-decoration: none;">Impressum</a>
-    |
-    <a href="/datenschutz.html" 
-       style="margin: 0 10px; color: #666; text-decoration: none;">Datenschutz</a>
+<footer class="footer-grid">
+  <div>&copy; 2025 Power Apps Jena · Erstellt in Thüringen</div>
+  <div class="social">
+    <a href="https://www.linkedin.com/in/julius-bruch-054296294/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="20" alt="LinkedIn">
+    </a>
+  </div>
+  <div>
+    <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a>
   </div>
 </footer>
+
 </body>
 </html>
